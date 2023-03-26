@@ -47,7 +47,6 @@ router.get('/', (req, res) => {
       res.json(dbTagData);
   });
 
-
   router.post('/', (req, res) => {
     // create a new tag
     Tag.create({
