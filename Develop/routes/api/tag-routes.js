@@ -16,16 +16,11 @@ router.get('/', (req, res) => {
     ]
   })
     .then(dbTagData => res.json(dbTagData))
-    if(!dbTagData) {
-      res.status(404).json({ message: 'No product found!  Choose another product.' });
-      return;
-    }
-    res.json(dbTagData);
-  })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
+  })
 
   router.get('/:id', (req, res) => {
     // find a single tag by its `id`, include its associated Product data
@@ -39,12 +34,17 @@ router.get('/', (req, res) => {
         attributes: ['product_name', 'price', 'stock', 'category_id']
       }
     })
-      .then(dbTagData => res.json(dbTagData))
-      if(!dbTagData) {
-        res.status(404).json({ message: 'No tag found with this id' });
-        return;
-      }
-      res.json(dbTagData);
+      .then(dbTagData => {
+        if(!dbTagData) {
+          res.status(404).json({ message: 'No tag found with this id' });
+          return;
+        }
+        res.json(dbTagData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
   });
 
   router.post('/', (req, res) => {
