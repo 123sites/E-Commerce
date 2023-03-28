@@ -33,6 +33,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
+    attributes: ['id', 'category_name'],
     include: {
       model: Product,
       // See Bootcamp instructions under the name "Product"
@@ -66,11 +67,34 @@ router.post("/", (req, res) => {
 
 router.put("/:id", (req, res) => {
   // update a category by its `id` value
-  Category.update(req.body, {
+  // Category.update(req.body, {
+    Category.update(req.body, {
+      where: {
+          id: req.params.id
+      }
+  })
+      .then(dbCategoryData => {
+          if (!dbCategoryData[0]) {
+              res.status(404).json({ message: 'No Category found with this id' });
+              return;
+          }
+          res.json(dbCategoryData);
+      })
+      .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
+      });
+
+    Category.update(
+    {
+      category_name: req.body.tag_name
+    },
+  {
     where: {
       id: req.params.id,
-    },
-  })
+    }
+  }
+  )
     .then((dbCategoryData) => {
       if (!dbCategoryData) {
         res
@@ -127,7 +151,7 @@ module.exports = router;
 //     const categoryData = await Category.findAll({
 //       include: [
 //         { model: Product },
-//         // It says "ALL" DO I NEED THE BELOW COMMENTED CODE????????????????????????????????????????
+//        
 //         // DELETE BRACKETS.
 //         // if (!categoryData) {
 //         //   res
