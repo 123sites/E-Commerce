@@ -12,9 +12,7 @@ This is a
 
 You can find the link to the repository at:
 [Repository link](https://github.com/123sites/E-Commerce.git)
-
-The link to the Markdown-Creator is at:
-[Markdown-Creator Link](https://123sites.github.io/E-Commerce/)
+[Video link](https://youtu.be/Ar7lHOCY1XQ)
 
 ## Usage
 
