@@ -2,42 +2,27 @@
 
 ## Description ✏️
 
-This is a 
+This is for a manager at an internet retail company. This back-end code will help an e-commerce business use the latest technologies!
 
 ## Installation 🔑
 
 1.  Download or clone the repository,
 2.  ```Node.js``` is required to run this application,
 3.  ```npm``` will need to be installed as well.
+4.  Can be used with npm start to start it with Insomnia.
 
 You can find the link to the repository at:
 [Repository link](https://github.com/123sites/E-Commerce.git)
-[Video link](https://youtu.be/Ar7lHOCY1XQ)
 
 ## Usage
 
-1. This application will be prompted through using the command node index.js.
-2. The user is then asked questions for the README.
-3. After they answer all the questions, the below sections are generated:
-   - Description
-   - Table of Contents
-     - With clickable links to the corresponding sections
-   - Installation
-   - Usage
-   - Contributing
-   - Tests
-   - Questions
-     - Link to to GitHub profile is added
-     - Instructions regarding how to reach out by email, with additional questions
-   - License
+This can be used by an e-commerce busingess.
+
 
 ## Video Demonstration 🎯
 
-[Click here to see the video]()
+[Click here to see the video](https://youtu.be/Ar7lHOCY1XQ)
 
-## Screenshot 🎯
-
-[Click here to see the screenshot]()
 
 ## Credits 👈
 
@@ -60,3 +45,4 @@ So far, I have the `Pull Shark` and `Yolo` badges on GitHub.  Click to view them
 - Express
 - Sequelize
 - JavaScript
+- Can be used with Insomnia
