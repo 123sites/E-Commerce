@@ -36,7 +36,7 @@ The MIT license is in the GitHub repository.  Click to link to view it:
 ## Badges 🏆
 
 So far, I have the `Pull Shark` and `Yolo` badges on GitHub.  Click to view them:
-![Achievements tab](https://github.com/123sites?tab=achievements)
+[Achievements tab](https://github.com/123sites?tab=achievements)
 
 ## Features ✍
 
